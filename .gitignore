@@ -1,5 +1,5 @@
 /node_modules
-src/keys/
+src/keys/*
 bundle.js
 npm-debug.log
 .DS_Store
