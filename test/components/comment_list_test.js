@@ -5,8 +5,8 @@ describe('CommentList', () => {
     let componentCommentList;
 
     beforeEach(() => {
-        const props = { comments: ['New Comment', 'Other New Comment'] };
-        componentCommentList = renderComponent(CommentList, null, props);
+        const appState = { comments: ['New Comment', 'Other New Comment'] };
+        componentCommentList = renderComponent(CommentList, null, appState);
     });
 
     it('shows a LI for each comment', () => {
