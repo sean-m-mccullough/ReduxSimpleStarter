@@ -5,7 +5,8 @@ import { removeComment } from '../actions';
 class CommentList extends Component {
 
     handleClick(event) {
-        this.props.removeComment(event.target.innerText);
+        const comment = event.target.innerText || event.target.textContent;
+        this.props.removeComment(comment);
     }
 
     createList(){

@@ -6,7 +6,6 @@ describe('CommentList', () => {
 
     beforeEach(() => {
         const props = { comments: ['New Comment', 'Other New Comment'] };
-
         componentCommentList = renderComponent(CommentList, null, props);
     });
 
@@ -20,9 +19,7 @@ describe('CommentList', () => {
     });
 
     it('removes comment when clicked', () => {
-        componentCommentList.find('li:first-child').simulate('click');
-
-        // TODO: simulate click doesn't seem to work, need to investigate
-        //expect(componentCommentList.find('li:first-child')).to.have.text('Other New Comment');
+        componentCommentList.find('li:first-child').simulate('click', 'New Comment');
+        expect(componentCommentList.find('li:first-child')).to.have.text('Other New Comment');
     })
 });
